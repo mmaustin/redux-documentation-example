@@ -7,15 +7,16 @@ export const QuestionsList = () => {
     const questions = useSelector(selectQuestions)
 
     const renderedQuestions = questions.map(q => (
-        <article  key={q.id}>
-        <p>{q.question}</p>
-        <p>{q.answer}</p>
-      </article>
+        <div key={q.id}>
+            <p>Question: {q.question}</p>
+            <p>Answer: {q.answer}</p>
+        </div>
     ))
 
     return(
-        <>
-        This will be where the questions go.
-        </>
+        <section>
+            <h3>Questions and Answers</h3>
+            {renderedQuestions}
+        </section>
     )
 }
