@@ -6,7 +6,12 @@ export const QuestionsList = () => {
 
     const questions = useSelector(selectQuestions)
 
-    
+    const renderedQuestions = questions.map(q => (
+        <article  key={q.id}>
+        <p>{q.question}</p>
+        <p>{q.answer}</p>
+      </article>
+    ))
 
     return(
         <>
