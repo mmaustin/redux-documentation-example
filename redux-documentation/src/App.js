@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import { Questions } from './features/questions/Questions';
+import { QuestionsList } from './features/questions/QuestionsList';
 import './App.css';
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
         </span>
       </header>
       <section className="Questions">
-        <Questions />
+        <QuestionsList />
       </section>
     </div>
   );
