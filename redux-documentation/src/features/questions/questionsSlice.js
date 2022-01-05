@@ -10,3 +10,7 @@ export const questionsSlice = createSlice({
     initialState,
     reducers: {}
 })
+
+export const {} = questionsSlice.actions;
+
+export default questionsSlice.reducer;
