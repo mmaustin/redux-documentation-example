@@ -8,11 +8,7 @@ const initialState = {
 export const questionsSlice = createSlice({
     name: 'questions',
     initialState,
-    reducers: {
-        uppercase: (state, action) => {
-            state.push(action.payload);
-            }
-        }
+    reducers: {}
 })
 
 export const selectQuestions = (state) => state.questions.questionsArray;
