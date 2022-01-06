@@ -8,7 +8,13 @@ const initialState = {
 export const questionsSlice = createSlice({
     name: 'questions',
     initialState,
-    reducers: {}
+    reducers: {
+        uppercase: (state) => {
+            state.questionsArray.map(q => {
+                return q.question.toUpperCase();
+            })
+        }
+    }
 })
 
 export const selectQuestions = (state) => state.questions.questionsArray;
