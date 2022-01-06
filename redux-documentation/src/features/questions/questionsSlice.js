@@ -19,6 +19,6 @@ export const questionsSlice = createSlice({
 
 export const selectQuestions = (state) => state.questions.questionsArray;
 
-//export const {} = questionsSlice.actions;
+export const {uppercase} = questionsSlice.actions;
 
 export default questionsSlice.reducer;
