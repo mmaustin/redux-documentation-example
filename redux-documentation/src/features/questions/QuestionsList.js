@@ -18,7 +18,7 @@ export const QuestionsList = () => {
 
     const renderedQuestions = questions.map(q => (
         <div key={q.id}>
-            <p>Question: {q.question}</p>
+            <p onClick={changeColor}>Question: {q.question}</p>
             <p>Answer: {q.answer}</p>
         </div>
     ))
