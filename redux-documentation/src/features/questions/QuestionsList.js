@@ -5,11 +5,12 @@ import { uppercase } from './questionsSlice';
 
 export const QuestionsList = () => {
 
-    const questions = useSelector(selectQuestions)
+    const questions = useSelector(selectQuestions);
+    const dispatch = useDispatch;
 
     const renderedQuestions = questions.map(q => (
         <div key={q.id}>
-            <p>Question: {q.question}</p>
+            <p onClick={dispatch(uppercase())}>Question: {q.question}</p>
             <p>Answer: {q.answer}</p>
         </div>
     ))
@@ -17,7 +18,9 @@ export const QuestionsList = () => {
     return(
         <section>
             <h3>Questions and Answers</h3>
-            {renderedQuestions}
+            <div>
+                {renderedQuestions}
+            </div>
         </section>
     )
 }
