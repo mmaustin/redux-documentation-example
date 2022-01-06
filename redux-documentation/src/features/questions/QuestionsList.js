@@ -1,12 +1,12 @@
 import React from 'react' //import React, { useState } from 'react';
-import { useSelector} from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 import { selectQuestions } from './questionsSlice';
-//import { uppercase } from './questionsSlice';
+import { pushed } from './questionsSlice';
 
 export const QuestionsList = () => {
 
     const questions = useSelector(selectQuestions);
-    //const dispatch = useDispatch;
+    const dispatch = useDispatch;
 
     const changeColor = (e) => {
         if(e.target.style.color === 'blue'){
@@ -29,6 +29,7 @@ export const QuestionsList = () => {
             <div>
                 {renderedQuestions}
             </div>
+            <button onClick={dispatch(pushed())}>Push Push Push</button>
         </section>
     )
 }
