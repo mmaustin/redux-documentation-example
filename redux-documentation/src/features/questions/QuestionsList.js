@@ -29,7 +29,7 @@ export const QuestionsList = () => {
             <div>
                 {renderedQuestions}
             </div>
-            <button onClick={() => dispatch(pushed('Let\'s pretend that this is a question'))}>Push Push Push</button>
+            <button onClick={dispatch(pushed('Let\'s pretend that this is a question'))}>Push Push Push</button>
         </section>
     )
 }
