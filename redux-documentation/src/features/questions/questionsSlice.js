@@ -12,8 +12,8 @@ export const questionsSlice = createSlice({
     name: 'questions',
     initialState,
     reducers: {
-        pushed: (state) => {
-            state.push('pushed')
+        pushed(state, action){
+            state.push(action.payload)
         }
     }
 })
