@@ -2,6 +2,7 @@ import React from 'react' //import React, { useState } from 'react';
 import { useSelector, useDispatch} from 'react-redux';
 import { selectQuestions } from './questionsSlice';
 import { pushed } from './questionsSlice';
+import { nanoid } from '@reduxjs/toolkit'
 
 export const QuestionsList = () => {
 
