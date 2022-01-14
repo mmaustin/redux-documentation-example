@@ -34,8 +34,8 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
-    multiply: (state) => {
-      state.value *= 3;
+    multiply: (state, action) => {
+      state.value *= action.payload;
     }
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
