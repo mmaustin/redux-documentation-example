@@ -18,6 +18,10 @@ export function Counter() {
 
   const incrementValue = Number(incrementAmount) || 0;
 
+  const onMultiply = () => {
+    dispatch(multiply(2))
+  }
+
   return (
     <div>
       <div className={styles.row}>
