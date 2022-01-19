@@ -68,7 +68,8 @@ export function Counter() {
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(multiply(3))}
+          //onClick={() => dispatch(multiply(3))}
+          onClick={onMultiply}
         >
           Multiply
         </button>
