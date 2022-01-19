@@ -68,7 +68,6 @@ export const Counter = () => {
         </button>
         <button
           className={styles.button}
-          //onClick={() => dispatch(multiply(3))}
           onClick={onMultiply}
         >
           Multiply
@@ -77,3 +76,6 @@ export const Counter = () => {
     </div>
   );
 }
+
+//Handler functions already have the proper execution context and thus don't need to be called
+//via arrow functions in onClick, perhaps?
